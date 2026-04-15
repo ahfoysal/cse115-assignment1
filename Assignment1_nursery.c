@@ -12,12 +12,12 @@ struct plant {
 
 int main() {
     struct plant p[6] = {
-        {1401, "MoneyPlant", 6, 120, 45, "Easy"},
-        {1402, "Bonsai", 36, 2500, 8, "Hard"},
-        {1403, "AloeVera", 4, 90, 60, "Easy"},
-        {1404, "Rose", 10, 220, 25, "Medium"},
-        {1405, "SnakePlant", 18, 380, 18, "Easy"},
-        {1406, "Orchid", 12, 650, 12, "Hard"}
+        {1511, "Jasmine", 8, 180, 38, "Medium"},
+        {1512, "CactusMix", 24, 310, 22, "Easy"},
+        {1513, "TulsiHoly", 5, 110, 50, "Easy"},
+        {1514, "Hibiscus", 14, 260, 28, "Medium"},
+        {1515, "RubberPlant", 20, 450, 15, "Medium"},
+        {1516, "PeaceLily", 11, 540, 20, "Hard"}
     };
 
     int i, j, key, found = 0;

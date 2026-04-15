@@ -11,12 +11,12 @@ struct busTicket {
 
 int main() {
     struct busTicket t[6] = {
-        {812, "Dhaka-Benapole", "Desh", 18, 1050},
-        {813, "Dhaka-Kushtia", "SR", 9, 780},
-        {814, "Dhaka-Saidpur", "Hanif", 25, 1250},
-        {815, "Dhaka-Teknaf", "Royal", 11, 1950},
-        {816, "Dhaka-Jamalpur", "Shyamoli", 17, 620},
-        {817, "Dhaka-Noakhali", "Econo", 3, 580}
+        {921, "Dhaka-Chuadanga", "Desh", 14, 890},
+        {922, "Dhaka-Satkhira", "SR", 7, 1100},
+        {923, "Dhaka-Dinajpur", "Hanif", 21, 1350},
+        {924, "Dhaka-Bandarban", "Royal", 8, 1720},
+        {925, "Dhaka-Magura", "Shyamoli", 19, 740},
+        {926, "Dhaka-Lakshmipur", "Econo", 5, 540}
     };
 
     int i, j, key, found = 0;

@@ -12,12 +12,12 @@ struct ride {
 
 int main() {
     struct ride r[6] = {
-        {9911, "Mohakhali", "Gulshan-1", "CNG", 4.2, 220},
-        {9912, "Uttara", "Banani", "Uber", 9.0, 410},
-        {9913, "Mirpur-10", "Dhanmondi", "Pathao", 7.5, 280},
-        {9914, "Farmgate", "Motijheel", "Taxi", 6.1, 340},
-        {9915, "Shyamoli", "Bashundhara", "Uber", 11.3, 520},
-        {9916, "Airport", "Agrabad", "Taxi", 12.0, 650}
+        {8821, "Rampura", "Uttara", "CNG", 10.5, 420},
+        {8822, "Mohammadpur", "Motijheel", "Uber", 8.2, 380},
+        {8823, "Badda", "Farmgate", "Pathao", 6.8, 250},
+        {8824, "Kallyanpur", "Gulshan-2", "Taxi", 7.4, 360},
+        {8825, "Khilgaon", "Bashundhara", "Uber", 9.6, 460},
+        {8826, "Malibagh", "Airport", "Taxi", 13.5, 710}
     };
 
     int i, j, key, found = 0;

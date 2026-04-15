@@ -11,12 +11,12 @@ struct tiffin {
 
 int main() {
     struct tiffin o[6] = {
-        {4501, "Hilsa Rice Combo", 1, 310, "Gulshan"},
-        {4502, "Morog Polao", 2, 420, "Baridhara"},
-        {4503, "Dal Rice Basic", 3, 210, "Shyamoli"},
-        {4504, "Chicken Roast Meal", 1, 275, "Khilgaon"},
-        {4505, "Veg Fried Rice", 2, 240, "Rampura"},
-        {4506, "Beef Kacchi", 1, 380, "Motijheel"}
+        {4611, "Prawn Curry Box", 1, 340, "Niketan"},
+        {4612, "Khichuri Special", 2, 360, "Nikunja"},
+        {4613, "Chicken Grill Rice", 1, 290, "Lalmatia"},
+        {4614, "Tuna Salad Bowl", 1, 255, "Dhanmondi"},
+        {4615, "Paneer Rice Combo", 2, 320, "Panthapath"},
+        {4616, "Mixed Kebab Platter", 1, 410, "Kakrail"}
     };
 
     int i, j, key, found = 0;

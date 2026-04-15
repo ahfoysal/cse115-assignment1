@@ -12,12 +12,12 @@ struct cake {
 
 int main() {
     struct cake c[6] = {
-        {7701, "Chocolate", 1.0, 850, "Rose topping", "05:00PM"},
-        {7702, "Vanilla", 0.5, 450, "Happy Birthday", "11:00AM"},
-        {7703, "RedVelvet", 2.0, 1800, "Gold foil", "07:30PM"},
-        {7704, "Blackforest", 1.5, 1250, "Cherry cluster", "02:45PM"},
-        {7705, "Strawberry", 1.0, 950, "Fruit slices", "06:15PM"},
-        {7706, "Cheesecake", 0.8, 780, "Caramel drizzle", "04:00PM"}
+        {7811, "Mocha Fudge", 1.2, 920, "Coffee beans", "04:30PM"},
+        {7812, "Butterscotch", 0.6, 520, "Toffee bits", "12:00PM"},
+        {7813, "Tiramisu", 1.8, 1650, "Cocoa dust", "08:00PM"},
+        {7814, "Pineapple", 1.3, 1100, "Fruit chunks", "03:15PM"},
+        {7815, "Lemon Tart", 0.9, 870, "Citrus zest", "05:45PM"},
+        {7816, "Mango Mousse", 1.0, 960, "Mango slices", "06:30PM"}
     };
 
     int i, j, key, found = 0;

@@ -12,12 +12,12 @@ struct solar {
 
 int main() {
     struct solar s[6] = {
-        {5501, "Savar Rooftop", 4.5, 320, 22, "Mono"},
-        {5502, "Teknaf Solar Park", 25.0, 1850, 19, "Poly"},
-        {5503, "Bogura Warehouse", 10.2, 720.5, 21, "Mono"},
-        {5504, "Jhenaidah Farm", 6.8, 480, 18, "Thin-film"},
-        {5505, "Rangpur Clinic", 3.2, 245, 20, "Poly"},
-        {5506, "Sylhet Resort", 8.1, 610, 23, "Mono"}
+        {5611, "Mongla Port", 5.2, 380, 21, "Mono"},
+        {5612, "Kutubdia Island", 22.4, 1680, 20, "Poly"},
+        {5613, "Pabna Mill", 12.5, 860, 22, "Mono"},
+        {5614, "Kurigram Farm", 7.1, 510, 17, "Thin-film"},
+        {5615, "Gazipur School", 4.0, 295, 19, "Poly"},
+        {5616, "Moulvibazar Tea", 9.3, 690, 24, "Mono"}
     };
 
     int i, j, key, found = 0;

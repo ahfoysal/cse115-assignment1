@@ -12,12 +12,12 @@ struct show {
 
 int main() {
     struct show s[6] = {
-        {4401, "Hawa", "Star-1", 180, 400, "06:30PM"},
-        {4402, "Poran", "Blockbuster", 140, 450, "09:15PM"},
-        {4403, "Monpura", "Balaka", 95, 250, "03:00PM"},
-        {4404, "Priyotoma", "Star-2", 210, 500, "07:45PM"},
-        {4405, "Interstellar", "IMAX", 250, 650, "10:30PM"},
-        {4406, "Dune", "Star-3", 175, 550, "08:00PM"}
+        {4511, "Surongo", "Star-4", 165, 420, "05:45PM"},
+        {4512, "Mujib", "Blockbuster", 125, 380, "08:30PM"},
+        {4513, "Aynabaji", "Balaka", 88, 230, "02:15PM"},
+        {4514, "Debi", "Star-1", 195, 470, "06:50PM"},
+        {4515, "Oppenheimer", "IMAX", 235, 700, "09:45PM"},
+        {4516, "Oppenheimer", "Star-2", 160, 520, "07:20PM"}
     };
 
     int i, j, key, found = 0;

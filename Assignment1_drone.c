@@ -11,12 +11,12 @@ struct drone {
 
 int main() {
     struct drone f[6] = {
-        {2210, "DJI-Mini-4", 16.4, 115, 58},
-        {2211, "Autel-Nano", 24.8, 165, 82},
-        {2212, "Hubsan-Zino", 12.7, 90, 47},
-        {2213, "DJI-Phantom", 28.3, 195, 88},
-        {2214, "Skydio-X2", 19.6, 135, 70},
-        {2215, "DJI-Mavic-Pro", 33.5, 220, 95}
+        {2320, "DJI-Avata", 15.8, 105, 52},
+        {2321, "Autel-Lite", 22.3, 148, 76},
+        {2322, "Holy-Stone", 11.2, 85, 43},
+        {2323, "DJI-Inspire", 31.6, 210, 90},
+        {2324, "Parrot-Bebop", 18.9, 128, 66},
+        {2325, "DJI-FPV", 29.4, 175, 84}
     };
 
     int i, j, key, found = 0;

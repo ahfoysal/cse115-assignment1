@@ -12,12 +12,12 @@ struct match {
 
 int main() {
     struct match m[6] = {
-        {6101, "Bangladesh", "India", "India", 35, "Mirpur"},
-        {6102, "Pakistan", "Srilanka", "Pakistan", 6, "Lahore"},
-        {6103, "Australia", "England", "Australia", 78, "Sydney"},
-        {6104, "Bangladesh", "Afghan", "Bangladesh", 22, "Chattogram"},
-        {6105, "Newzealand", "Westind", "Newzealand", 14, "Auckland"},
-        {6106, "India", "Srilanka", "India", 55, "Colombo"}
+        {6201, "Bangladesh", "Ireland", "Bangladesh", 48, "Sylhet"},
+        {6202, "Pakistan", "Afghan", "Afghan", 8, "Sharjah"},
+        {6203, "Australia", "SouthAfrica", "Australia", 61, "Melbourne"},
+        {6204, "Bangladesh", "Zimbabwe", "Bangladesh", 19, "Khulna"},
+        {6205, "Newzealand", "India", "India", 25, "Wellington"},
+        {6206, "England", "Srilanka", "England", 44, "London"}
     };
 
     int i, j, key, found = 0;

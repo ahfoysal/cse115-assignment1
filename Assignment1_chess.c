@@ -12,12 +12,12 @@ struct chess {
 
 int main() {
     struct chess g[6] = {
-        {2301, "Carlsen", "Nakamura", "White", 41, "Sicilian"},
-        {2302, "Ding", "Nepo", "Draw", 67, "Ruy-Lopez"},
-        {2303, "Caruana", "Firouzja", "Black", 33, "Caro-Kann"},
-        {2304, "Gukesh", "Erigaisi", "White", 55, "KingsIndian"},
-        {2305, "Anand", "Pragg", "Draw", 29, "QueensGambit"},
-        {2306, "Abhimanyu", "Niemann", "Black", 48, "FrenchDef"}
+        {2401, "Carlsen", "Duda", "White", 38, "Italian"},
+        {2402, "Nakamura", "So", "Draw", 72, "Berlin"},
+        {2403, "Firouzja", "Aronian", "Black", 44, "Slav"},
+        {2404, "Pragg", "Nepo", "White", 51, "EnglishOp"},
+        {2405, "Caruana", "Ding", "Draw", 35, "GrunfeldDef"},
+        {2406, "Niemann", "Gukesh", "Black", 59, "ScotchGame"}
     };
 
     int i, j, key, found = 0;

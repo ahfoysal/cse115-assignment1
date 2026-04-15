@@ -12,12 +12,12 @@ struct recharge {
 
 int main() {
     struct recharge r[6] = {
-        {88011, "GP", "1209", 249, "5GB-30days", "Success"},
-        {88012, "Robi", "5544", 149, "3GB-14days", "Success"},
-        {88013, "BL", "8790", 99, "1.5GB-7days", "Failed"},
-        {88014, "Airtel", "3322", 349, "8GB-30days", "Success"},
-        {88015, "Teletalk", "6601", 59, "500MB-3days", "Success"},
-        {88016, "GP", "4415", 499, "15GB-30days", "Success"}
+        {77021, "Robi", "2208", 199, "4GB-15days", "Success"},
+        {77022, "GP", "7733", 129, "2GB-7days", "Success"},
+        {77023, "Airtel", "5512", 79, "1GB-3days", "Failed"},
+        {77024, "BL", "9901", 299, "7GB-30days", "Success"},
+        {77025, "Teletalk", "3340", 49, "300MB-2days", "Success"},
+        {77026, "Robi", "6678", 549, "20GB-30days", "Success"}
     };
 
     int i, j, key, found = 0;

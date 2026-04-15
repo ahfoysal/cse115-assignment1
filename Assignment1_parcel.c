@@ -11,12 +11,12 @@ struct parcel {
 
 int main() {
     struct parcel p[6] = {
-        {3301, "Gazipur", 1.8, 140, "Shipped"},
-        {3302, "Comilla", 4.2, 225.5, "Delivered"},
-        {3303, "Mymensingh", 2.1, 110, "Pending"},
-        {3304, "Bogura", 3.0, 185, "Delivered"},
-        {3305, "Jessore", 5.5, 290, "Pending"},
-        {3306, "Narayanganj", 0.7, 65, "Shipped"}
+        {3307, "Tangail", 2.3, 155, "Shipped"},
+        {3308, "Feni", 3.9, 210, "Delivered"},
+        {3309, "Pabna", 1.7, 98, "Pending"},
+        {3310, "Naogaon", 4.1, 232, "Delivered"},
+        {3311, "Brahmanbaria", 6.2, 315, "Pending"},
+        {3312, "Sirajganj", 0.8, 72, "Shipped"}
     };
 
     int i, j, key, found = 0;

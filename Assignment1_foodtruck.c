@@ -12,12 +12,12 @@ struct sale {
 
 int main() {
     struct sale s[6] = {
-        {101, "Burger", 2, 180, "Cash", "Dhanmondi-27"},
-        {102, "Shawarma", 4, 150, "bKash", "Banani-11"},
-        {103, "Pasta", 1, 220, "Card", "Gulshan-2"},
-        {104, "Fries", 3, 80, "Cash", "Uttara-4"},
-        {105, "HotDog", 2, 130, "bKash", "Mirpur-10"},
-        {106, "ChickenWrap", 5, 170, "Card", "Bashundhara"}
+        {211, "FalafelRoll", 3, 160, "Cash", "Gulshan-1"},
+        {212, "BeefTaco", 2, 210, "bKash", "Dhanmondi-8"},
+        {213, "Nachos", 1, 240, "Card", "Banani-15"},
+        {214, "Samosa", 6, 40, "Cash", "Khilkhet"},
+        {215, "KebabRoll", 3, 155, "bKash", "Baridhara"},
+        {216, "FriedChicken", 4, 195, "Card", "Niketan"}
     };
 
     int i, j, key, found = 0;
