@@ -27,12 +27,12 @@ void SortByFare(TicketData t[]);
 int main(void)
 {
     TicketData tickets[SIZE] = {
-        {501, "Dhaka-Coxs Bazar", "Hanif",     12, 1800.00},
-        {502, "Dhaka-Sylhet",     "Green Line", 4, 1200.00},
-        {503, "Dhaka-Rajshahi",   "Shyamoli",  22,  950.00},
-        {504, "Dhaka-Khulna",     "Eagle",      7,  850.00},
-        {505, "Dhaka-Barishal",   "Sakura",    15,  700.00},
-        {506, "Dhaka-Rangpur",    "Nabil",     30, 1100.00}
+        {812, "Dhaka-Benapole",  "Desh",      18, 1050.00},
+        {813, "Dhaka-Kushtia",   "SR",         9,  780.00},
+        {814, "Dhaka-Saidpur",   "Hanif",     25, 1250.00},
+        {815, "Dhaka-Teknaf",    "Royal",     11, 1950.00},
+        {816, "Dhaka-Jamalpur",  "Shyamoli",  17,  620.00},
+        {817, "Dhaka-Noakhali",  "Econo",      3,  580.00}
     };
 
     int no;

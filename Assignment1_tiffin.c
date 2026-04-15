@@ -27,12 +27,12 @@ void SortByPrice(TiffinData o[]);
 int main(void)
 {
     TiffinData orders[SIZE] = {
-        {9001, "Chicken Biryani Box", 2, 360.00, "Bashundhara"},
-        {9002, "Beef Khichuri",       1, 180.00, "Dhanmondi"  },
-        {9003, "Veg Thali",           3, 330.00, "Uttara"     },
-        {9004, "Fish Curry Meal",     1, 220.00, "Mirpur"     },
-        {9005, "Egg Fried Rice",      2, 260.00, "Banani"     },
-        {9006, "Mutton Tehari",       1, 300.00, "Mohammadpur"}
+        {4501, "Hilsa Rice Combo",    1, 310.00, "Gulshan"  },
+        {4502, "Morog Polao",         2, 420.00, "Baridhara"},
+        {4503, "Dal Rice Basic",      3, 210.00, "Shyamoli" },
+        {4504, "Chicken Roast Meal",  1, 275.00, "Khilgaon" },
+        {4505, "Veg Fried Rice",      2, 240.00, "Rampura"  },
+        {4506, "Beef Kacchi",         1, 380.00, "Motijheel"}
     };
 
     int id;

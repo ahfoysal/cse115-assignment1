@@ -27,12 +27,12 @@ void SortByCost(ParcelData p[]);
 int main(void)
 {
     ParcelData parcels[SIZE] = {
-        {1021, "Dhaka",      2.5, 120.00, "Delivered"},
-        {1022, "Chattogram", 5.0, 260.50, "Shipped"  },
-        {1023, "Sylhet",     1.2,  95.00, "Pending"  },
-        {1024, "Rajshahi",   3.8, 210.75, "Delivered"},
-        {1025, "Khulna",     4.4, 245.00, "Pending"  },
-        {1026, "Barishal",   0.9,  70.00, "Shipped"  }
+        {3301, "Gazipur",     1.8, 140.00, "Shipped"  },
+        {3302, "Comilla",     4.2, 225.50, "Delivered"},
+        {3303, "Mymensingh",  2.1, 110.00, "Pending"  },
+        {3304, "Bogura",      3.0, 185.00, "Delivered"},
+        {3305, "Jessore",     5.5, 290.00, "Pending"  },
+        {3306, "Narayanganj", 0.7,  65.00, "Shipped"  }
     };
 
     int searchID;

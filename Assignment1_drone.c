@@ -27,12 +27,12 @@ void SortByDuration(FlightData f[]);
 int main(void)
 {
     FlightData flights[SIZE] = {
-        {7001, "DJI-Mini-3",   18.5, 120.0, 65},
-        {7002, "Autel-Evo",    22.0, 150.0, 78},
-        {7003, "Parrot-Anafi", 10.3,  80.0, 40},
-        {7004, "DJI-Air-2S",   26.7, 180.0, 85},
-        {7005, "Skydio-2",     14.2, 100.0, 55},
-        {7006, "DJI-Mavic-3",  30.1, 200.0, 92}
+        {2210, "DJI-Mini-4",   16.4, 115.0, 58},
+        {2211, "Autel-Nano",   24.8, 165.0, 82},
+        {2212, "Hubsan-Zino",  12.7,  90.0, 47},
+        {2213, "DJI-Phantom",  28.3, 195.0, 88},
+        {2214, "Skydio-X2",    19.6, 135.0, 70},
+        {2215, "DJI-Mavic-Pro",33.5, 220.0, 95}
     };
 
     int id;
