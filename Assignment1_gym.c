@@ -1,103 +1,61 @@
-/*
- * CSE-115 : Programming Language I
- * Assignment 1 - User Defined Data Type (Structure)
- * Topic    : Gym Workout Session Log
- * Operations: linear search by session ID, bubble sort by calories burned
- */
-
 #include <stdio.h>
 #include <string.h>
 
-#define SIZE 6
-
-struct gymSession {
-    int   sessionID;
-    char  exercise[20];
-    int   durationMin;
-    float caloriesBurned;
-    char  difficulty[10];   /* Easy / Medium / Hard */
-    char  workoutDate[12];  /* DD-MM-YYYY */
+struct gym {
+    int sessionID;
+    char exercise[20];
+    int duration;
+    float calories;
+    char level[10];
+    char date[12];
 };
 
-typedef struct gymSession SessionData;
-
-void Display(SessionData s[]);
-void Search(SessionData s[], int id);
-void SortByCalories(SessionData s[]);
-
-int main(void)
-{
-    SessionData sessions[SIZE] = {
-        {3001, "Treadmill",   45, 420.5, "Medium", "05-04-2026"},
-        {3002, "DeadLift",    30, 280.0, "Hard",   "06-04-2026"},
-        {3003, "Cycling",     60, 550.0, "Medium", "07-04-2026"},
-        {3004, "Yoga",        40, 180.0, "Easy",   "08-04-2026"},
-        {3005, "HIIT",        25, 380.0, "Hard",   "10-04-2026"},
-        {3006, "Swimming",    50, 610.0, "Hard",   "12-04-2026"}
+int main() {
+    struct gym g[6] = {
+        {3001, "Treadmill", 45, 420.5, "Medium", "05-04-2026"},
+        {3002, "DeadLift", 30, 280, "Hard", "06-04-2026"},
+        {3003, "Cycling", 60, 550, "Medium", "07-04-2026"},
+        {3004, "Yoga", 40, 180, "Easy", "08-04-2026"},
+        {3005, "HIIT", 25, 380, "Hard", "10-04-2026"},
+        {3006, "Swimming", 50, 610, "Hard", "12-04-2026"}
     };
 
-    int id;
+    int i, j, key, found = 0;
+    struct gym temp;
 
-    printf("===== Workout sessions (original) =====\n");
-    Display(sessions);
-
-    printf("\nEnter a session ID to search: ");
-    scanf("%d", &id);
-    Search(sessions, id);
-
-    SortByCalories(sessions);
-
-    printf("\n===== Workout sessions (sorted by calories) =====\n");
-    Display(sessions);
-
-    return 0;
-}
-
-void Display(SessionData s[])
-{
-    int i;
-    printf("%-6s %-14s %-8s %-10s %-10s %-12s\n",
-           "ID", "Exercise", "Dur(min)", "Calories", "Level", "Date");
-    for (i = 0; i < SIZE; i++) {
-        printf("%-6d %-14s %-8d %-10.2f %-10s %-12s\n",
-               s[i].sessionID, s[i].exercise, s[i].durationMin,
-               s[i].caloriesBurned, s[i].difficulty, s[i].workoutDate);
+    printf("All Sessions:\n");
+    for (i = 0; i < 6; i++) {
+        printf("ID: %d, Exercise: %s, Duration: %d min, Calories: %.2f, Level: %s, Date: %s\n",
+               g[i].sessionID, g[i].exercise, g[i].duration, g[i].calories, g[i].level, g[i].date);
     }
-}
 
-void Search(SessionData s[], int id)
-{
-    int i, found = 0;
-    for (i = 0; i < SIZE; i++) {
-        if (s[i].sessionID == id) {
-            printf("\nSession found:\n");
-            printf("  Session ID : %d\n",        s[i].sessionID);
-            printf("  Exercise   : %s\n",        s[i].exercise);
-            printf("  Duration   : %d min\n",    s[i].durationMin);
-            printf("  Calories   : %.2f kcal\n", s[i].caloriesBurned);
-            printf("  Difficulty : %s\n",        s[i].difficulty);
-            printf("  Date       : %s\n",        s[i].workoutDate);
+    printf("\nEnter session ID to search: ");
+    scanf("%d", &key);
+    for (i = 0; i < 6; i++) {
+        if (g[i].sessionID == key) {
+            printf("Found: %d, %s, %d min, %.2f kcal, %s, %s\n",
+                   g[i].sessionID, g[i].exercise, g[i].duration, g[i].calories, g[i].level, g[i].date);
             found = 1;
-            break;
         }
     }
-    if (found == 0) {
-        printf("\nNo session found with ID %d.\n", id);
-    }
-}
+    if (found == 0)
+        printf("Session not found.\n");
 
-void SortByCalories(SessionData s[])
-{
-    int i, j;
-    SessionData temp;
-
-    for (i = 0; i < SIZE - 1; i++) {
-        for (j = 0; j < SIZE - 1 - i; j++) {
-            if (s[j].caloriesBurned > s[j + 1].caloriesBurned) {
-                temp     = s[j];
-                s[j]     = s[j + 1];
-                s[j + 1] = temp;
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5 - i; j++) {
+            if (g[j].calories > g[j + 1].calories) {
+                temp = g[j];
+                g[j] = g[j + 1];
+                g[j + 1] = temp;
             }
         }
     }
+
+    printf("\nAfter sorting by calories:\n");
+    for (i = 0; i < 6; i++) {
+        printf("ID: %d, Exercise: %s, Duration: %d min, Calories: %.2f, Level: %s, Date: %s\n",
+               g[i].sessionID, g[i].exercise, g[i].duration, g[i].calories, g[i].level, g[i].date);
+    }
+
+    return 0;
 }

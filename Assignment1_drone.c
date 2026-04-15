@@ -1,101 +1,60 @@
-/*
- * CSE-115 : Programming Language I
- * Assignment 1 - User Defined Data Type (Structure)
- * Topic    : Drone Flight Log
- * Operations: linear search by flight ID, bubble sort by duration
- */
-
 #include <stdio.h>
 #include <string.h>
 
-#define SIZE 6
-
-struct droneFlight {
-    int   flightID;
-    char  droneModel[20];   /* e.g. DJI-Mini-3 */
-    float duration;         /* minutes */
-    float maxAltitude;      /* meters */
-    int   batteryUsed;      /* percent */
+struct drone {
+    int flightID;
+    char model[20];
+    float duration;
+    float altitude;
+    int battery;
 };
 
-typedef struct droneFlight FlightData;
-
-void Display(FlightData f[]);
-void Search(FlightData f[], int id);
-void SortByDuration(FlightData f[]);
-
-int main(void)
-{
-    FlightData flights[SIZE] = {
-        {2210, "DJI-Mini-4",   16.4, 115.0, 58},
-        {2211, "Autel-Nano",   24.8, 165.0, 82},
-        {2212, "Hubsan-Zino",  12.7,  90.0, 47},
-        {2213, "DJI-Phantom",  28.3, 195.0, 88},
-        {2214, "Skydio-X2",    19.6, 135.0, 70},
-        {2215, "DJI-Mavic-Pro",33.5, 220.0, 95}
+int main() {
+    struct drone f[6] = {
+        {2210, "DJI-Mini-4", 16.4, 115, 58},
+        {2211, "Autel-Nano", 24.8, 165, 82},
+        {2212, "Hubsan-Zino", 12.7, 90, 47},
+        {2213, "DJI-Phantom", 28.3, 195, 88},
+        {2214, "Skydio-X2", 19.6, 135, 70},
+        {2215, "DJI-Mavic-Pro", 33.5, 220, 95}
     };
 
-    int id;
+    int i, j, key, found = 0;
+    struct drone temp;
 
-    printf("===== Flight log (original) =====\n");
-    Display(flights);
-
-    printf("\nEnter a flight ID to search: ");
-    scanf("%d", &id);
-    Search(flights, id);
-
-    SortByDuration(flights);
-
-    printf("\n===== Flight log (sorted by duration) =====\n");
-    Display(flights);
-
-    return 0;
-}
-
-void Display(FlightData f[])
-{
-    int i;
-    printf("%-6s %-14s %-10s %-10s %-8s\n",
-           "ID", "Model", "Dur(min)", "Alt(m)", "Batt(%)");
-    for (i = 0; i < SIZE; i++) {
-        printf("%-6d %-14s %-10.2f %-10.2f %-8d\n",
-               f[i].flightID, f[i].droneModel,
-               f[i].duration, f[i].maxAltitude, f[i].batteryUsed);
+    printf("All Flights:\n");
+    for (i = 0; i < 6; i++) {
+        printf("ID: %d, Model: %s, Duration: %.2f min, Altitude: %.2f m, Battery: %d%%\n",
+               f[i].flightID, f[i].model, f[i].duration, f[i].altitude, f[i].battery);
     }
-}
 
-void Search(FlightData f[], int id)
-{
-    int i, found = 0;
-    for (i = 0; i < SIZE; i++) {
-        if (f[i].flightID == id) {
-            printf("\nFlight found:\n");
-            printf("  Flight ID : %d\n",      f[i].flightID);
-            printf("  Model     : %s\n",      f[i].droneModel);
-            printf("  Duration  : %.2f min\n", f[i].duration);
-            printf("  Altitude  : %.2f m\n",  f[i].maxAltitude);
-            printf("  Battery   : %d %%\n",   f[i].batteryUsed);
+    printf("\nEnter flight ID to search: ");
+    scanf("%d", &key);
+    for (i = 0; i < 6; i++) {
+        if (f[i].flightID == key) {
+            printf("Found: %d, %s, %.2f min, %.2f m, %d%%\n",
+                   f[i].flightID, f[i].model, f[i].duration, f[i].altitude, f[i].battery);
             found = 1;
-            break;
         }
     }
-    if (found == 0) {
-        printf("\nNo flight log with ID %d.\n", id);
-    }
-}
+    if (found == 0)
+        printf("Flight not found.\n");
 
-void SortByDuration(FlightData f[])
-{
-    int i, j;
-    FlightData temp;
-
-    for (i = 0; i < SIZE - 1; i++) {
-        for (j = 0; j < SIZE - 1 - i; j++) {
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5 - i; j++) {
             if (f[j].duration > f[j + 1].duration) {
-                temp     = f[j];
-                f[j]     = f[j + 1];
+                temp = f[j];
+                f[j] = f[j + 1];
                 f[j + 1] = temp;
             }
         }
     }
+
+    printf("\nAfter sorting by duration:\n");
+    for (i = 0; i < 6; i++) {
+        printf("ID: %d, Model: %s, Duration: %.2f min, Altitude: %.2f m, Battery: %d%%\n",
+               f[i].flightID, f[i].model, f[i].duration, f[i].altitude, f[i].battery);
+    }
+
+    return 0;
 }
